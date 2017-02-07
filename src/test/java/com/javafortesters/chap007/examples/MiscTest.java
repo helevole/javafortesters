@@ -14,7 +14,7 @@ import static org.junit.Assert.assertTrue;
  * Created by HeleVole on 30-Jan-17.
  */
 @SuppressWarnings("deprecation")
-public class MiscTests {
+public class MiscTest {
 
     @Test
     public void aJavaDocComment(){
@@ -129,5 +129,47 @@ public class MiscTests {
 
         doublePrecision64bit = 652.49;
         assertEquals(652.49, doublePrecision64bit, 0.0);
+    }
+
+    @Test
+    public void characterType(){
+
+        char aChar = '\u0040';
+        assertEquals("compare hex value with char", '@', aChar);
+    }
+
+    @Test
+    public void traditionalOperatorsExplored(){
+        assertEquals(15, 3 + 12);
+        assertEquals(43, 95 - 52);
+        assertEquals(7.5F, 2.5F * 3.0F, 0);
+        assertEquals(1.2, 3 / 2.5, 0);
+        assertEquals("ab" + "cd", "abcd");
+        assertEquals(4, 74%5);
+    }
+
+    @Test
+    public void assignmentOperatorsExplored(){
+
+        String ab = "ab";
+        assertEquals("ab", ab);
+
+        int num = 10;
+        assertEquals(10, num);
+
+        num += 13;
+        assertEquals(23, num);
+
+        num -= 5;
+        assertEquals(18, num);
+
+        num *= 2;
+        assertEquals(36, num);
+
+        num /= 4;
+        assertEquals(9, num);
+
+        num %= 5;
+        assertEquals(4, num);
     }
 }
