@@ -172,4 +172,29 @@ public class MiscTest {
         num %= 5;
         assertEquals(4, num);
     }
+
+    @Test
+    public void incrementDecrementOperatorsExplored(){
+        int num = 10;
+
+        assertEquals(11, ++num);
+        assertEquals(11, num);
+
+        assertEquals(11, num++);
+        assertEquals(12, num);
+
+        assertEquals(11, --num);
+        assertEquals(11, num);
+
+        assertEquals(11, num--);
+        assertEquals(10, num);
+    }
+
+    @Test
+    public void booleanOperatorsExplored(){
+        assertTrue(26 == 26);
+        assertTrue(25 < 26);
+        assertFalse(26 < 25);
+
+    }
 }
