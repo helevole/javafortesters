@@ -20,4 +20,16 @@ public class SelectionDecision {
         return "http://" + url;
     }
 
+    @Test
+    public void catOrCatsTest(){
+
+        Assert.assertEquals("cat", catOrCats(1));
+        Assert.assertEquals("cats", catOrCats(2));
+    }
+
+    public String catOrCats(int numberOfCats){
+        String output;
+
+        numberOfCats > 1 ? output = "cats" : output ="cat";
+    }
 }
