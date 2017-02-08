@@ -192,9 +192,99 @@ public class MiscTest {
 
     @Test
     public void booleanOperatorsExplored(){
+
         assertTrue(26 == 26);
         assertTrue(25 < 26);
         assertFalse(26 < 25);
+        assertFalse(26==25);
+        assertTrue(26 > 25);
+        assertFalse(25 > 26);
+        assertTrue(25 != 26);
+        assertFalse(25 != 25);
+        assertTrue(25 >= 25);
+        assertTrue(26 >= 25);
+        assertFalse(25 >= 26);
+        assertTrue(25 <= 25);
+        assertTrue(25 <= 26);
+        assertFalse(26 <= 25);
+    }
+
+    @Test
+    public void conditionalOperatorsExplored(){
+
+        assertTrue(true && true);
+        assertFalse(true && false);
+        assertFalse(false || false);
+        assertTrue(true || false);
+        assertTrue(false || true);
 
     }
+
+    @Test
+    public void ternaryOperatorsExplored(){
+        int x;
+
+        x = 3*153 > 59*6 ? 1 : 0;
+        assertEquals(1, x);
+
+        assertTrue(486 / 3 > 756 / 6 ? true : false);
+    }
+
+    @Test
+    public void bitwiseOperatorsExplored(){
+        assertEquals(0b0010,
+                0b1010 & 0b0111);
+        assertEquals(0b1011,
+                0b0001 | 0b1010);
+        assertEquals(0b1101,
+                0b1001 ^ 0b0100);
+        int x = 0b1000;
+        assertEquals("11111111111111111111111111110111",
+                Integer.toBinaryString(~x));
+    }
+
+    @Test
+    public void bitwiseAssignmentOperatorsExplored(){
+
+        byte x = 0b0101;
+
+        assertEquals(0b0001, x &= 0b1001);
+        assertEquals(0b1001, x |= 0b1001);
+        assertEquals(0b1111, x ^= 0b0110);
+    }
+
+    @Test
+    public void bitshiftOperatorsExplored(){
+
+        int x = 84;
+
+        assertEquals(x*4, x<<2);
+        assertEquals(x*16, x<<4);
+        assertEquals(x*256, x<<8);
+
+        x = Integer.MAX_VALUE;
+        assertEquals(Integer.MAX_VALUE/4, x>>2);
+        assertEquals(Integer.MAX_VALUE/16, x>>4);
+        assertEquals(Integer.MAX_VALUE/256, x>>8);
+
+        x= Integer.MIN_VALUE;
+        assertEquals((Integer.MAX_VALUE/2) + 1, x>>>1);
+    }
+
+    @Test
+    public void operatorprecedence(){
+        assertEquals(20, (1800/(((3+7)*11)-20)));
+    }
+
+    @Test
+    public void stringMethods(){
+
+        String string = "some string";
+
+        System.out.println(string.length());
+        System.out.println(string.charAt(8));
+        System.out.println(string.contains("e str"));
+        assertTrue(string.equalsIgnoreCase("SomE String"));
+    }
+
 }
