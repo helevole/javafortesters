@@ -3,7 +3,7 @@ package com.javafortesters.chap009.examples;
 import com.javafortesters.domainentities.User;
 import org.junit.Test;
 import static org.junit.Assert.assertEquals;
-
+import java.util.Arrays;
 
 /**
  * Created by csabi on 2/23/17.
@@ -133,5 +133,63 @@ public class ArrraysLoops {
         User[] fifty = new User[50];
         assertEquals(50, fifty.length);
 
+        for(int i=0; i < months.length; i++){
+            System.out.println(months[i]);
+        }
+    }
+
+    @Test
+    public void arrayMethodsCopyOfExample(){
+
+        String[] twoyears;
+        twoyears = Arrays.copyOf(months, 24);
+
+        assertEquals("Dec", twoyears[11]);
+        assertEquals(null, twoyears[12]);
+
+        for(int i=12; i < twoyears.length; i++){
+            twoyears[i] = months[i-12];
+            System.out.println(twoyears[i]);
+        }
+
+        assertEquals("Dec", twoyears[11]);
+        assertEquals("Jan", twoyears[12]);
+        assertEquals("May", twoyears[16]);
+    }
+
+    @Test
+    public void arrayMethodsCopyOfRangeExample(){
+
+        String result = "";
+        String[] fallmonths;
+
+        fallmonths = Arrays.copyOfRange(months,8,11);
+
+        assertEquals(3, fallmonths.length);
+        assertEquals("Sep", fallmonths[0]);
+        assertEquals("Nov", fallmonths[2]);
+
+        for(String month : fallmonths){
+            result = result + month + "|";
+        }
+
+        System.out.println(result);
+    }
+
+    @Test
+    public void arrayMethodsFillExample(){
+
+        int[] rand = new int[] {5,8,36,7,1,6,78,2,6,4,9,6,27,8};
+        int[] randMore;
+        randMore = Arrays.copyOf(rand, 20);
+
+        Arrays.fill(randMore, 14, 19, 1);
+        assertEquals(5, randMore[0]);
+        assertEquals(8, randMore[13]);
+        assertEquals(1, randMore[14]);
+        assertEquals(1, randMore[17]);
+        assertEquals(0, randMore[19]);
     }
 }
+
+
