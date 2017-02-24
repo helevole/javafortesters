@@ -190,6 +190,24 @@ public class ArrraysLoops {
         assertEquals(1, randMore[17]);
         assertEquals(0, randMore[19]);
     }
+
+    @Test
+    public void arrayMethodsSortExample(){
+        String[] orderedMonths;
+        orderedMonths = Arrays.copyOf(months,12);
+
+        Arrays.sort(orderedMonths);
+
+        assertEquals("Apr",orderedMonths[0]);
+        assertEquals("Sep",orderedMonths[11]);
+        assertEquals("Aug",orderedMonths[1]);
+
+        for(int i = 0; i < orderedMonths.length; i++){
+            System.out.println(orderedMonths[i]);
+        }
+    }
 }
+
+
 
 
