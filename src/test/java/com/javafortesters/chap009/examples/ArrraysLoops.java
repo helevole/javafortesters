@@ -1,9 +1,11 @@
 package com.javafortesters.chap009.examples;
 
+
 import com.javafortesters.domainentities.User;
 import org.junit.Test;
 import static org.junit.Assert.assertEquals;
 import java.util.Arrays;
+
 
 /**
  * Created by csabi on 2/23/17.
@@ -206,6 +208,65 @@ public class ArrraysLoops {
             System.out.println(orderedMonths[i]);
         }
     }
+
+    public int[][] create2DArray(){
+
+        int[][] raggedarray = new int[16][];
+
+        for(int first = 0; first < 16; first++){
+
+            raggedarray[first] = new int[first + 1];
+
+            for(int sec = 0; sec < 16 && sec < ( first + 1); sec++){
+                raggedarray[first][sec] = sec;
+            }
+        }
+
+        assertEquals(7, raggedarray[13][7]);
+
+        return raggedarray;
+
+    }
+
+    int[][] raggedarray = create2DArray();
+
+    /*@Test
+    public void printRagged(){
+
+        int[] newline = new int[]{};
+
+        for(int i = 0; i < raggedarray.length; i++){
+
+            for(int j = 0; j < raggedarray[i].length; j++){
+
+                newline[j] = raggedarray[i][j];
+                System.out.print( raggedarray[]+ ",");
+
+            }
+
+        }
+
+    }*/
+
+    public void print2DIntArray(int [][]multi){
+            for(int[] outer : multi){
+                if(outer==null){
+                    System.out.print("null");
+                }else{
+                    for(int inner : outer){
+                        System.out.print(inner + ",");
+                    }
+                }
+                System.out.println("");
+            }
+    }
+
+
+    @Test
+    public void printRaggedArray(){
+        print2DIntArray(raggedarray);
+    }
+
 }
 
 
