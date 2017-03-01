@@ -230,24 +230,17 @@ public class ArrraysLoops {
 
     int[][] raggedarray = create2DArray();
 
-    /*@Test
+    @Test
     public void printRagged(){
-
-        int[] newline = new int[]{};
-
         for(int i = 0; i < raggedarray.length; i++){
-
             for(int j = 0; j < raggedarray[i].length; j++){
-
-                newline[j] = raggedarray[i][j];
-                System.out.print( raggedarray[]+ ",");
-
+                System.out.print( raggedarray[i][j]+ ",");
             }
-
+            System.out.println("");
         }
 
-    }*/
-
+    }
+/*
     public void print2DIntArray(int [][]multi){
             for(int[] outer : multi){
                 if(outer==null){
@@ -264,9 +257,9 @@ public class ArrraysLoops {
 
     @Test
     public void printRaggedArray(){
-        print2DIntArray(raggedarray);
+        printRagged(raggedarray);
     }
-
+*/
 }
 
 
