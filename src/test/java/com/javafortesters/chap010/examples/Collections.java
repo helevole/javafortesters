@@ -16,7 +16,7 @@ public class Collections {
 
     String[] months = new String[]{"Jan","Feb","Mar","Apr","May","Jun","Jul","Aug","Sep","Oct","Nov","Dec"};
     List<String> numerics = new ArrayList<>();
-
+    List<String> monthcoll = Arrays.asList(months);
 
     public List<String> arrayToList(){
 
@@ -84,4 +84,68 @@ public class Collections {
         } while (i < numsToPrint.size());
 
     }
+
+    @Test
+    public void findMonthForEach(){
+        int i = 0;
+        for(String month : monthcoll){
+            if(month.equals("Mar")){
+                break;
+            }
+            i++;
+        }
+        System.out.println(i);
+        assertEquals("Mar", monthcoll.get(i));
+    }
+
+    @Test
+    public void findMonthFor(){
+
+        int i;
+        for(i = 0; i < monthcoll.size(); i++){
+            if (monthcoll.get(i).equals("Dec")){
+                System.out.println(i);
+                break;
+            }
+        }
+        assertEquals("Dec", monthcoll.get(i));
+
+    }
+
+    @Test
+    public void findMonthWhile(){
+
+        int i = 0;
+        while (!monthcoll.get(i).equals("Nov")){
+            i++;
+        }
+
+        System.out.println(i);
+        assertEquals("Nov", monthcoll.get(i));
+
+    }
+
+    @Test
+    public void findMonthDoWhile(){
+
+        int i = -1;
+        do{
+            i++;
+        }
+        while(monthcoll.get(i).equals("Jan"));
+
+        System.out.println(i);
+        assertEquals("Jan",monthcoll.get(i));
+    }
+
+    @Test
+    public void forInsteadOfWhileExercise(){
+        int i;
+        for (i =0; !monthcoll.get(i).equals("Nov"); i++){
+        }
+
+        System.out.println(i);
+        assertEquals("Nov", monthcoll.get(i));
+    }
+
 }
