@@ -6,6 +6,7 @@ import com.javafortesters.chap009.examples.ArrraysLoops;
 
 import java.util.ArrayList;
 import java.util.Arrays;
+import java.util.Collection;
 import java.util.List;
 
 /**
@@ -147,5 +148,15 @@ public class Collections {
         System.out.println(i);
         assertEquals("Nov", monthcoll.get(i));
     }
+
+    @Test
+    public void collectionInterfaceBasics(){
+        ArrayList<String> mycollection;
+        mycollection = new <String>ArrayList();
+
+        assertEquals(2, monthcoll.indexOf("Mar"));
+
+    }
+
 
 }
