@@ -1,5 +1,6 @@
 package com.javafortesters.chap010.examples;
 
+import com.javafortesters.domainentities.User;
 import org.junit.Test;
 import static org.junit.Assert.*;
 
@@ -152,6 +153,38 @@ public class Lists {
         List<Integer> lessNumbers = new ArrayList<>();
         lessNumbers = numbers.subList(2, 6);
 
+        assertEquals(4, lessNumbers.size());
+        assertEquals(4, lessNumbers.get(0).intValue());
+        assertEquals(7, lessNumbers.get(1).intValue());
+        assertEquals(2, lessNumbers.get(3).intValue());
+
+    }
+
+    @Test
+    public void listExercise(){
+
+        List<User> users = new ArrayList<>();
+        User user1 = new User("userone", "passone");
+        User user2 = new User("usertwo","passtwo");
+
+        assertEquals(0, users.size());
+
+        users.add(user2);
+        assertEquals(1, users.size());
+        assertEquals(user2, users.get(0));
+
+        users.add(0, user1);
+        assertEquals(2, users.size());
+        assertEquals(user1, users.get(0));
+        assertEquals(user2, users.get(1));
+
+        assertEquals(0, users.indexOf(user1));
+        assertEquals(1, users.indexOf(user2));
+
+        users.remove(0);
+
+        assertEquals(0, users.indexOf(user2));
+        assertEquals(1, users.size());
     }
 
 
