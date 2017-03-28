@@ -10,7 +10,7 @@ import java.util.Arrays;
 /**
  * Created by csabi on 2/23/17.
  */
-public class ArrraysLoops {
+public class ArrraysLoopsTest {
 
     String[] months = new String[] {"Jan","Feb","Mar","Apr","May","Jun","Jul","Aug","Sep","Oct","Nov","Dec"};
 

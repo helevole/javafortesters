@@ -10,7 +10,7 @@ import static org.junit.Assert.*;
 /**
  * Created by csabi on 3/28/17.
  */
-public class Inheritance {
+public class InheritanceTest {
 
     @Test
     public void basicInheritanceExample(){

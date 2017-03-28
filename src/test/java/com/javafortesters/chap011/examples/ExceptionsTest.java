@@ -12,7 +12,7 @@ import static org.junit.Assert.*;
 /**
  * Created by HeleVole on 26-Mar-17.
  */
-public class Exceptions {
+public class ExceptionsTest {
 
     //Example for NullPointerException
 

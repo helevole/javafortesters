@@ -10,7 +10,7 @@ import java.util.*;
 /**
  * Created by HeleVole on 26-Mar-17.
  */
-public class Maps {
+public class MapsTest {
 
     @Test
     public void mapExamples(){

@@ -12,7 +12,7 @@ import java.util.List;
 /**
  * Created by csabi on 3/24/17.
  */
-public class Lists {
+public class ListsTest {
 
     String[] monthsArray = new String[]{"Jan","Feb","Mar","Apr","May","Jun","Jul","Aug","Sep","Oct","Nov","Dec"};
 

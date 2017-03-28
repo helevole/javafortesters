@@ -7,7 +7,7 @@ import org.junit.Test;
 /**
  * Created by csabi on 2/8/17.
  */
-public class SelectionDecision {
+public class SelectionDecisionTest {
 
     @Test
     public void moreTernary(){

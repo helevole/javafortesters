@@ -10,7 +10,7 @@ import static org.junit.Assert.*;
 /**
  * Created by HeleVole on 25-Mar-17.
  */
-public class Sets {
+public class SetsTest {
 
     @Test
     public void setExamples() {

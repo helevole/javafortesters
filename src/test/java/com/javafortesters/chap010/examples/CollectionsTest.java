@@ -2,17 +2,15 @@ package com.javafortesters.chap010.examples;
 
 import static org.junit.Assert.*;
 
-import com.javafortesters.chap008.examples.SelectionDecision;
 import com.javafortesters.domainentities.User;
 import org.junit.Test;
-import com.javafortesters.chap009.examples.ArrraysLoops;
 
 import java.util.*;
 
 /**
  * Created by csabi on 2/27/17.
  */
-public class Collections {
+public class CollectionsTest {
 
 
     String[] months = new String[]{"Jan","Feb","Mar","Apr","May","Jun","Jul","Aug","Sep","Oct","Nov","Dec"};
