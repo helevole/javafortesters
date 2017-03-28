@@ -1,5 +1,7 @@
 package com.javafortesters.domainentities;
 
+import com.javafortesters.domainobject.TestAppEnv;
+
 /**
  * Created by HeleVole on 29-Jan-17.
  */
@@ -14,7 +16,7 @@ public class User {
 
     public User(String username, String password){
         this.username = username;
-        this.password = password;
+        setPassword(password);
     }
 
     public String getUsername(){
@@ -25,7 +27,16 @@ public class User {
         return password;
     }
 
-    public void setPassword(String password){
-        this.password = password;
+    public void setPassword(String password)
+    {
+        if (password.length() < 7){
+            throw new IllegalArgumentException("The password has to be at least 7 characters long");
+        } else {
+            this.password = password;
+        }
+    }
+
+    public String getPermission(){
+        return "Normal";
     }
 }
